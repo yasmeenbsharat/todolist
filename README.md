@@ -21,7 +21,7 @@ The site displays all the user tasks as soon as he logs in to the site.
 
 ### Update task
 The user can update the task by clicking on the blue pen icon located at each task.
-The task is also modified when you click on the box so that it is marked as completed.
+The task is also modified when you click on the checkbox so that it is marked as completed.
 
 
 ### Deleting a Task
