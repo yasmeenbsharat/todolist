@@ -20,3 +20,25 @@
   .btn {
     padding: 8px 16px !important;
   }
+
+@media only screen and (max-width: 550px) and (min-width: 411px)  {
+  .btn ,.date-time{
+    padding: 4px 8px !important;
+  }
+ 
+}
+
+@media only screen and (max-width: 410px){
+
+.item {
+  flex-direction: column !important;
+  gap: 20px;
+}
+.btn ,.date-time{
+  padding: 2px 4px !important;
+ 
+}
+.date-time{
+  margin-right: 40px !important;
+}
+}

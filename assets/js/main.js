@@ -33,7 +33,7 @@ if (typeof localStorage !== 'undefined') {
     }
     clearInputs();
     displayTasks();
-    //document.querySelector('form').submit();
+
 
 
 
@@ -51,9 +51,9 @@ if (typeof localStorage !== 'undefined') {
       }
 
       result += `<li
-  class="list-group-item d-flex justify-content-between align-items-center border-start-0 border-top-0 border-end-0 border-bottom rounded-0 mb-2"
+  class="item list-group-item d-flex justify-content-between align-items-center border-start-0 border-top-0 border-end-0 border-bottom rounded-0 mb-2"
 >
-  <div class="d-flex align-items-center ">
+  <div class="d-flex align-items-center w-50 ">
   <label
   for="taskState"
   class="d-none text-capitalize"
@@ -65,25 +65,29 @@ if (typeof localStorage !== 'undefined') {
       onclick="doneTask(${i})"
       value=""
       ${state}
+      aria-labelledby="done${i}"
       aria-label="..."
     />
+    <span id="done${i}" class="d-none" >Submit Form</span>
     <h4> ${tasks[i].taskName} </h4>
 
   </div>
+  <div class="d-flex align-items-center w-50 ">
   <div
-  class="py-2 px-3 me-2 border border-warning rounded-3 d-flex align-items-center bg-light">
+  class="date-time py-2 px-3 me-2 border border-warning rounded-3 d-flex align-items-center bg-light w-50">
   <p class="small mb-0">
       <i class="fa-solid fa-calendar-days me-2 text-warning"></i>
       ${tasks[i].dateTimeTask}
   </p>
 </div>
-<div class="d-flex flex-row justify-content-end mb-1">
-<button class="btn btn-outline-info text-center me-3 " onclick="editTask(${i})">
+<div class="d-flex flex-row justify-content-end mb-1 w-50">
+<button aria-label="edit" class="btn btn-outline-info text-center me-3 " onclick="editTask(${i})">
   <i class="fas fa-pencil-alt m-auto"></i>
 </button>
-<button class="btn btn-outline-danger text-center" onclick="deleteTask(${i})">
+<button aria-label="delete" class="btn btn-outline-danger text-center" onclick="deleteTask(${i})">
   <i class="fas fa-trash-alt m-auto"></i>
 </button>
+</div>
 </div>
 </li>`
 
